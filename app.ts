@@ -32,7 +32,7 @@ interface LocationWithTimezone {
 const getLocationsWithTimezones = (
   req: Request,
   res: Response,
-  _next: NextFunction
+  next: NextFunction
 ) => {
   const locations: LocationWithTimezone[] = [
     {
@@ -59,13 +59,15 @@ const getLocationsWithTimezones = (
       timezoneAbbr: "JST",
       utcOffset: 9,
     },
-    {
+  ];
+
+  if (req.treatment == "on")
+    locations.push({
       location: "Kenya",
       timezoneName: "Eastern Africa Time",
       timezoneAbbr: "EAT",
       utcOffset: 3,
-    },
-  ];
+    });
 
   res.status(200).json(locations);
 };
