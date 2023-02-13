@@ -1,4 +1,4 @@
 # Lifecycle script for the project:
 
-```**NPM RUN DEV** :```  
-  It starts a server with Express using ts-node-dev to restart it everytime a change is detected in the typescript file.
+```npm install # install requiere dependencies  
+npm run dev # start the server with Express plus ts node dev to restart the server when a change is detected ```
