@@ -1,4 +1,6 @@
-# Lifecycle script for the project:
+# Lifecycle scripts for the project:  
+
+You need to have **node.js** version starting from 14 and a terminal to run the following scripts
 
 ```
 npm install # install requiere dependencies
